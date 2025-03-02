@@ -14,7 +14,7 @@ class Home extends Component {
     async getAPIData() {
         try {
             let response = await fetch(
-                `https://newsapi.org/v2/everything?q=${this.props.q}&language=${this.props.language}&page=1&pageSize=18&sortBy=publishedAt&apiKey=5c360dbe570840d3a340464e8967a563`
+                `https://newsapi.org/v2/everything?q=${this.props.q}&language=${this.props.language}&page=1&pageSize=18&sortBy=publishedAt&apiKey=3916ddc1609f4a7aa879e34eaf006a92`
             );
             response = await response.json();
             console.log("API Response:", response); 
@@ -35,7 +35,7 @@ class Home extends Component {
     fetchData= async()=>{
         this.setState({page:this.state.page+1})
         let response = await fetch(
-            `https://newsapi.org/v2/everything?q=${this.props.q}&language=${this.props.language}&page=${this.state.p}&pageSize=18&sortBy=publishedAt&apiKey=4e5fcef324c645789d54857d5b1601ae`
+            `https://newsapi.org/v2/everything?q=${this.props.q}&language=${this.props.language}&page=${this.state.p}&pageSize=18&sortBy=publishedAt&apiKey=3916ddc1609f4a7aa879e34eaf006a92`
         );
         response = await response.json();
         console.log("API Response:", response); 
